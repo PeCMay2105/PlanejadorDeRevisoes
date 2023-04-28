@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeCPlanner</title>
+</head>
+<body>
+    <div class="head">
+        <h1>Planejador</h1>
+        <h2>de</h2>
+        <h1>Revisões</h1>
+    </div>
+    <div class="middle">
+        <table class="tabela">
+            <tr class="linha">
+                <th class="celula">Matéria</th>
+                <th class="celula">Conteúdo</th>
+                <th class="celula">Última revisão</th>
+            </tr>
+            <tr class="linhaAdicionada">
+                <td class="celula">IHC</td>
+                <td class="celula">Padrões de qualidade</td>
+                <td class="celula">12-04-2023</td>
+            </tr>
+        </table>
+    </div>
+    <div class="main">
+        <div class="formulario">
+            <form onsubmit="controller.adiciona(event)">
+                <label for="materia">Matéria</label>
+                <input type="text" id="materia" class="item" name="materia">
+                <label for="conteudo">Conteúdo</label>
+                <input type="text" id="conteudo" class="item" name="conteudo">
+                <label for="data">Estudado pela última vez</label>
+                <input type="date" id="data" class="item" name="data">
+                <label for="intervalo">Tempo entre revisões</label>
+                <input type="text" id="intervalo" class="item" name="intervalo">
+                <input type="submit" id="submit" name="Adicionar" class="botao">
+            </form>
+        </div>
+    </div>
+    <script src="../view/revisaoView.js"></script>
+    <script src="../Controllers/revisaoController.js"></script>
+    <script src="../Models/Revisao.js"></script>
+    <script src="../Models/listaRevisao.js"></script>
+    <script src="../Helpers/dateHelper.js"></script>
+    <script>
+        let controller = new revisaoController()
+    </script>
+</body>
+</html>
