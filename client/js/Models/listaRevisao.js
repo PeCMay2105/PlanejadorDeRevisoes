@@ -1,4 +1,4 @@
-export class listaRevisao{
+ class listaRevisao{
 
     constructor(){
         this.revisoes = []
