@@ -16,6 +16,6 @@ app.use(function(req, res, next) {
 });
 
 
-routes(app);
+
 
 module.exports = app;
