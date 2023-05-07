@@ -9,6 +9,7 @@ class revisaoController{
         this.formInputIntervalo = $("intervalo")
         this.revisaoView = new revisaoView();
         this.listaRevisao = new listaRevisao()
+        this.BancoDeDados = new DBModel()
 
 
 
@@ -23,6 +24,7 @@ class revisaoController{
         const intervalo = this.formInputIntervalo.value
         
         this.criaListaRevisao(new Revisao(materia,conteudo,new dateHelper(data).data,intervalo))
+        this.BancoDeDados.adicionaRevisao(new Revisao(materia,conteudo,new dateHelper(data).data,intervalo))
         this.revisaoView.adicionaRevisao(this.listaRevisao.revisoes)
 
     }
