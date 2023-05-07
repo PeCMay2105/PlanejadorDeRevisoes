@@ -19,12 +19,19 @@ const Sequelize = require('sequelize');
     }
 
     console.log(retornoTabela[0].Nome_da_materia)
-    let arrayRetornoFormatado = retornoTabela.map(object => {
-        objetoFormatado.Materia = object.Nome_da_Materia;
-        objetoFormatado.conteudo = object.Conteudo;
-        objetoFormatado.intervalo = object.intervalo;
+    let arrayObjetos = []
+
+    retornoTabela.map(object => {
+    
+        let novoObjeto = {
+            "Materia": object.Nome_da_materia,
+            "conteudo": object.Conteudo,
+            "intervalo": object.intervalo
+        }
+        arrayObjetos.push(novoObjeto);
     })
-    console.log(arrayRetornoFormatado)
+
+    arrayObjetos.forEach(objeto => console.log(objeto))
 
 
 })()
