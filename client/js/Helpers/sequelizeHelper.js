@@ -1,4 +1,4 @@
-class sequelizeHelper{
+ class sequelizeHelper{
 
      sequelize = require('sequelize');
      BancoDeDados = require('../Models/DBModel.js');

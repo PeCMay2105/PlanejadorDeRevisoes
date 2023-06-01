@@ -1,4 +1,4 @@
-class dateHelper{
+ class dateHelper{
     constructor(data){
         this._data = data
     }
